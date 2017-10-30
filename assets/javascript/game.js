@@ -11,10 +11,20 @@ $(document).ready(function() {
 	var currentNum = 0;
 
 
+	// var x = "Match this Number: " + matchNum
+	$(".match-number").html("Match this Number: " + matchNum);
+	$("#wins").html("Wins: " + winNum);
+	$("#losses").html("Losses: " + lossNum);
+	$("#current-score").html(currentNum);
+	
+	console.log("Match" +matchNum);
+
 //funtion to assign random value to each crystals and generate random number
 	function reset (){
-		matchNum = RandomNum (19,120);
 		
+		matchNum = RandomNum (19,120);
+		currentNum = 0;
+		$("#current-score").html(currentNum);
 		//assign go trough each crystal and give number to class "value"
 		for(i=1;i<=4;i++){
 
@@ -25,23 +35,45 @@ $(document).ready(function() {
 			// console.log("crystl#1 " + $("#crystal1").attr("value"));
 			console.log("value"+i + ": "+ $(count).attr("value"));
 		}
-		console.log(matchNum);
+		console.log("match#: " + matchNum);
+		$(".match-number").html("Match this Number: " + matchNum);
+
 
 	}
-	$(".crystals").on("click",function(){
 
-		var placeholder = $(this).attr("value");
-		// console.log($("#crystal1"));
-		console.log("placeholder 2: " + placeholder);
-		currentNum += parseInt(placeholder);
-		// console.log("placeholder 2:" + placeholder);
-
-		console.log(currentNum);
-
-	});
+	reset ();
 
 
+	// if (currentNum < RandomNum){
 
-reset ();
+		$(".crystals").on("click",function(){
+
+			var placeholder = $(this).attr("value");
+			// console.log($("#crystal1"));
+			//console.log("placeholder 2: " + placeholder);
+			currentNum += parseInt(placeholder);
+			// console.log("placeholder 2:" + placeholder);
+			//console.log("current#: " + currentNum);
+			$("#current-score").html(currentNum);
+		
+		if (currentNum === matchNum){
+			winNum++;
+			console.log("win#" + winNum);
+			$("#wins").html("Wins: " + winNum);
+			reset();
+		}
+
+		else if (currentNum > matchNum){
+			lossNum++;
+			console.log("loss#: " + lossNum);
+			$("#losses").html("Losses: " + lossNum);
+			reset();
+		}
+
+		});
+	// }
+
 
 });
+
+
