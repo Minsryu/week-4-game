@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 
 	// var x = "Match this Number: " + matchNum
-	$(".match-number").html("Match this Number: " + matchNum);
+	$("#match-number").html(matchNum);
 	$("#wins").html("Wins: " + winNum);
 	$("#losses").html("Losses: " + lossNum);
 	$("#current-score").html(currentNum);
@@ -36,7 +36,7 @@ $(document).ready(function() {
 			console.log("value"+i + ": "+ $(count).attr("value"));
 		}
 		console.log("match#: " + matchNum);
-		$(".match-number").html("Match this Number: " + matchNum);
+		$("#match-number").html(matchNum);
 
 
 	}
