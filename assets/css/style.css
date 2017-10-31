@@ -1,4 +1,77 @@
-.crystals {
-	height: 100px;
-	width: 100px;
+*{
+	box-sizing:border-box;
+	margin: 0 auto;
 }
+
+.container{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 20px;
+	font-family: 'Cinzel', serif;
+	
+}
+body{
+	background-color: dodgerblue;
+}
+
+.content {
+	background-color: white;
+	margin-top: 30px;
+}
+
+.crystals {
+	
+	width: 180px;
+	height: 180px;
+}
+
+#match {
+	width: 100%;
+}
+
+.masthead {
+	height: 80px;
+	background-color: lightgrey;
+}
+
+header {
+	font-size: 40px;
+	text-align: center;
+	padding-top: 20px;
+
+}
+
+h1 {
+	font-family: 'Monda', sans-serif;
+	font-size: 18px;
+}
+
+#wins, #losses {
+	
+	text-align: center;
+	padding: 15px;
+	width: 48%;
+	border: grey solid 1px;
+	font-size: 25px;
+}
+
+.score-board {
+	overflow: auto;
+	padding: 10px 0;
+}
+
+#wins {
+	float: left;
+}
+
+#losses {
+	float: right;
+}
+
+#match {
+	clear:both;
+}
+
+
+
+

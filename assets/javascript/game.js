@@ -17,7 +17,7 @@ $(document).ready(function() {
 	$("#losses").html("Losses: " + lossNum);
 	$("#current-score").html(currentNum);
 	
-	console.log("Match" +matchNum);
+	console.log("Match " +matchNum);
 
 //funtion to assign random value to each crystals and generate random number
 	function reset (){
@@ -58,7 +58,7 @@ $(document).ready(function() {
 		
 		if (currentNum === matchNum){
 			winNum++;
-			console.log("win#" + winNum);
+			console.log("win#: " + winNum);
 			$("#wins").html("Wins: " + winNum);
 			reset();
 		}

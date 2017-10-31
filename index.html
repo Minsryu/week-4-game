@@ -6,38 +6,59 @@
 	
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Monda" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </head>
 <body>
-	<header>Crystal Collector</header>
-	<br>
-	<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis soluta, dolor? Sit illum dignissimos reiciendis, aperiam nesciunt porro! Maiores tempora iste officia iure, perferendis exercitationem esse dignissimos corporis aspernatur illo.</h1>
-	<br>
-	<div>
-		<h2 class="match-number">Match this number:</h2>
+	<div class="masthead" >
+		<div class="container" id="head">
+			<header>Crystal Collector</header>
+		</div>
 	</div>
+	
+	<div class="container content">
 	<br>
-	<div class="score-board">
-		<h2 id="results"></h2>
+		<h1>You will be given a random number at the start of the game.
+		<br><br>
+		There are four crystals below. BY clicking on a crystal you will add a specific amount of points to your total score.
+		<br><br>
+		You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. The value of each crystal is hidden from you until you click on it. 
+		<br><br>
+		Each time when the game starts the game will change the value of each crystal.</h1>
 		<br>
-		<h2 id="wins">Wins:</h2>
+
+		<div class="score-board">
+
+			<h2 id="wins">Wins:</h2>
+			<h2 id="losses">Losses:</h2>
+			<!-- <h2 id="results"></h2> -->
+			<br>
+			
+		</div>
+
+		<div id="match">
+			<h2 class="match-number">Match this number:</h2>
+		</div>
 		<br>
-		<h2 id="losses">Losses:</h2>
-	</div>
-	<br>
-	<div>
-		<img class="crystals" id="crystal1" src="assets/images/crystal1.png" value="">
-		<img class="crystals" id="crystal2" src="assets/images/crystal2.png" value="">
-		<img class="crystals" id="crystal3" src="assets/images/crystal3.png" value="">
-		<img class="crystals" id="crystal4" src="assets/images/crystal4.png" value="">
-	</div>
-	<br>
-	<div>
-		<h3>Your total score is: <span id="current-score"></span></h3>
+		<div>
+			<h3>Your total score is: <span id="current-score"></span></h3>
+		</div>
+
+		<br>
+		<div>
+			<img class="crystals" id="crystal1" src="assets/images/crystal1.png" value="">
+			<img class="crystals" id="crystal2" src="assets/images/crystal2.png" value="">
+			<img class="crystals" id="crystal3" src="assets/images/crystal3.png" value="">
+			<img class="crystals" id="crystal4" src="assets/images/crystal4.png" value="">
+		</div>
+		<br>
+		
+
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	
 	
 	
 </body>
